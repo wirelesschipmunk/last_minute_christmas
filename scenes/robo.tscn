@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ixw2orjpmkg"]
+
+[ext_resource type="Texture2D" uid="uid://cghren06pnipr" path="res://sprites/square.png" id="1_l8714"]
+[ext_resource type="Texture2D" uid="uid://ml8ockfv3ucg" path="res://sprites/spring.png" id="2_2j2xn"]
+[ext_resource type="Texture2D" uid="uid://db5khnny2bm0m" path="res://sprites/screw.png" id="3_t8pw5"]
+[ext_resource type="Texture2D" uid="uid://dpmj1ll5hfk6q" path="res://sprites/donut.png" id="4_rrys6"]
+
+[node name="robo" type="Node2D"]
+
+[node name="Square" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.28882e-05, 0.5)
+texture = ExtResource("1_l8714")
+
+[node name="Spring" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-7.99998, 24.5)
+texture = ExtResource("2_2j2xn")
+
+[node name="Spring2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8.00002, 24.5)
+texture = ExtResource("2_2j2xn")
+
+[node name="Screw" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(16, 1.5)
+texture = ExtResource("3_t8pw5")
+
+[node name="Screw2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, 0.5)
+rotation = 3.14159
+texture = ExtResource("3_t8pw5")
+
+[node name="Square2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.28882e-05, -23.5)
+texture = ExtResource("1_l8714")
+
+[node name="Donut" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(2.28882e-05, -23.5)
+texture = ExtResource("4_rrys6")

@@ -1,0 +1,373 @@
+[gd_scene load_steps=46 format=3 uid="uid://bbhohkmos7hkc"]
+
+[ext_resource type="PackedScene" uid="uid://b88ta7mnnhbql" path="res://scenes/hand.tscn" id="1_am00f"]
+[ext_resource type="Script" path="res://scripts/convyer.gd" id="1_e72bp"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_kv71i"]
+[ext_resource type="Texture2D" uid="uid://dxohc5mwks8y0" path="res://sprites/anvil.png" id="2_5u8od"]
+[ext_resource type="Script" path="res://scripts/objectSpawner.gd" id="3_xk5t5"]
+[ext_resource type="Texture2D" uid="uid://p1k3se7p1jie" path="res://sprites/convyer_belt.png" id="4_0nfvt"]
+[ext_resource type="Texture2D" uid="uid://cp62d0j2ecp2" path="res://sprites/colors/paint_btn.png" id="5_578vl"]
+[ext_resource type="Texture2D" uid="uid://c4ghhn86t4u0x" path="res://sprites/colors/red.png" id="6_sfxpp"]
+[ext_resource type="Texture2D" uid="uid://dt0cc6wqeaw7a" path="res://sprites/crafting.png" id="6_xijgr"]
+[ext_resource type="Texture2D" uid="uid://drbx4a44et57k" path="res://sprites/colors/orange.png" id="7_dqotd"]
+[ext_resource type="Texture2D" uid="uid://2k5rlp80cwkh" path="res://sprites/colors/yellow.png" id="8_rsly1"]
+[ext_resource type="Texture2D" uid="uid://b7ehlupuu0han" path="res://sprites/colors/green.png" id="9_hqir6"]
+[ext_resource type="Texture2D" uid="uid://c44lkallhwe43" path="res://sprites/colors/blue.png" id="10_wmpwt"]
+[ext_resource type="Texture2D" uid="uid://jgsu1ihailng" path="res://sprites/colors/pink.png" id="11_4gabe"]
+[ext_resource type="Texture2D" uid="uid://bddx0jsxtljpc" path="res://sprites/colors/indigo.png" id="12_k7knj"]
+[ext_resource type="Texture2D" uid="uid://bw1lbw8dnq6oq" path="res://sprites/colors/black.png" id="13_jri8i"]
+[ext_resource type="FontFile" uid="uid://bv2vyltcwugf0" path="res://BirchLeaf.ttf" id="16_51sfy"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="18_tbq0j"]
+[ext_resource type="Texture2D" uid="uid://dhuwf5yuoncuh" path="res://sprites/blueprint.png" id="19_nqlgq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdqsh"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 0, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok76x"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 88, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f4fa"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 176, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2ccs"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 264, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n87ql"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 352, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ek2k"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 440, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaiyi"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 528, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vpps"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 616, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvung"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 704, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdvxi"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 792, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ock3"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 880, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk4ys"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 968, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjtij"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1056, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up5kh"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1144, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjx8g"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1232, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xticm"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1320, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au0mk"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1408, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdd1l"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1496, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fhq2"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1584, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke422"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1672, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wxpi"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1760, 483, 88)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yf0t"]
+atlas = ExtResource("4_0nfvt")
+region = Rect2(0, 1848, 483, 88)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u7nb6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdqsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok76x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f4fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2ccs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n87ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ek2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaiyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vpps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvung")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdvxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ock3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk4ys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjtij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up5kh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjx8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xticm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au0mk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdd1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fhq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke422")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wxpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yf0t")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oakw"]
+size = Vector2(1664, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qc7s3"]
+size = Vector2(416, 409)
+
+[sub_resource type="LabelSettings" id="LabelSettings_odn5c"]
+font = ExtResource("16_51sfy")
+font_size = 31
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_kv71i")
+
+[node name="convyer" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_e72bp")
+
+[node name="convyerBelt" type="AnimatedSprite2D" parent="convyer"]
+texture_filter = 1
+position = Vector2(576, 112)
+scale = Vector2(3.0845, 3.0845)
+sprite_frames = SubResource("SpriteFrames_u7nb6")
+animation = &"new_animation"
+autoplay = "new_animation"
+speed_scale = 18.985
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="convyer"]
+position = Vector2(528, 96)
+shape = SubResource("RectangleShape2D_8oakw")
+
+[node name="Anvil" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(370, 568)
+scale = Vector2(2.70161, 2.70161)
+texture = ExtResource("2_5u8od")
+flip_h = true
+
+[node name="Blueprint" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(944, 420.798)
+scale = Vector2(2.55998, 2.55998)
+texture = ExtResource("19_nqlgq")
+
+[node name="crafting" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="craftingPlace" type="Sprite2D" parent="crafting"]
+texture_filter = 1
+position = Vector2(240, 422)
+scale = Vector2(2.575, 2.575)
+texture = ExtResource("6_xijgr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crafting"]
+position = Vector2(240, 420.5)
+shape = SubResource("RectangleShape2D_qc7s3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 328)
+zoom = Vector2(0.9, 0.9)
+
+[node name="colors" type="Node2D" parent="."]
+position = Vector2(-530, -8)
+scale = Vector2(1.08257, 1.08257)
+
+[node name="Button" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 448.0
+offset_top = 224.0
+offset_right = 472.0
+offset_bottom = 248.0
+scale = Vector2(2.66092, 2.66092)
+texture_normal = ExtResource("5_578vl")
+
+[node name="red" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 448.0
+offset_top = 296.0
+offset_right = 459.0
+offset_bottom = 307.0
+scale = Vector2(2.59296, 2.59296)
+texture_normal = ExtResource("6_sfxpp")
+
+[node name="orange" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 480.0
+offset_top = 296.0
+offset_right = 491.0
+offset_bottom = 307.0
+scale = Vector2(2.57961, 2.57961)
+texture_normal = ExtResource("7_dqotd")
+
+[node name="yellow" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 448.0
+offset_top = 328.0
+offset_right = 459.0
+offset_bottom = 339.0
+scale = Vector2(2.59075, 2.59075)
+texture_normal = ExtResource("8_rsly1")
+
+[node name="green" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 480.0
+offset_top = 328.0
+offset_right = 491.0
+offset_bottom = 339.0
+scale = Vector2(2.57504, 2.57504)
+texture_normal = ExtResource("9_hqir6")
+
+[node name="blue" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 448.0
+offset_top = 360.0
+offset_right = 459.0
+offset_bottom = 371.0
+scale = Vector2(2.55781, 2.55781)
+texture_normal = ExtResource("10_wmpwt")
+
+[node name="purple" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 480.339
+offset_top = 360.254
+offset_right = 491.339
+offset_bottom = 371.254
+scale = Vector2(2.57839, 2.57839)
+texture_normal = ExtResource("12_k7knj")
+
+[node name="pink" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 448.008
+offset_top = 391.661
+offset_right = 459.008
+offset_bottom = 402.661
+scale = Vector2(2.55689, 2.55689)
+texture_normal = ExtResource("11_4gabe")
+
+[node name="black" type="TextureButton" parent="colors"]
+texture_filter = 1
+offset_left = 480.0
+offset_top = 392.0
+offset_right = 491.0
+offset_bottom = 403.0
+scale = Vector2(2.54162, 2.54162)
+texture_normal = ExtResource("13_jri8i")
+
+[node name="objectSpawner" type="Marker2D" parent="."]
+position = Vector2(-176, 104)
+gizmo_extents = 55.0
+script = ExtResource("3_xk5t5")
+
+[node name="spawnRate" type="Timer" parent="objectSpawner"]
+wait_time = 0.2
+autostart = true
+
+[node name="objects" type="Node2D" parent="."]
+
+[node name="craftingObjects" type="Node2D" parent="."]
+
+[node name="hand" parent="." instance=ExtResource("1_am00f")]
+position = Vector2(512, 384)
+
+[node name="timer" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 232.0
+offset_right = 104.0
+offset_bottom = 280.0
+label_settings = SubResource("LabelSettings_odn5c")
+script = ExtResource("18_tbq0j")
+
+[node name="Timer" type="Timer" parent="timer"]
+wait_time = 20.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="convyer" to="convyer" method="_on_area_entered"]
+[connection signal="area_exited" from="convyer" to="convyer" method="_on_area_exited"]
+[connection signal="button_down" from="colors/Button" to="hand" method="_on_button_button_down"]
+[connection signal="button_down" from="colors/red" to="hand" method="_on_red_button_down"]
+[connection signal="button_down" from="colors/orange" to="hand" method="_on_orange_button_down"]
+[connection signal="button_down" from="colors/yellow" to="hand" method="_on_yellow_button_down"]
+[connection signal="button_down" from="colors/green" to="hand" method="_on_green_button_down"]
+[connection signal="button_down" from="colors/blue" to="hand" method="_on_blue_button_down"]
+[connection signal="button_down" from="colors/purple" to="hand" method="_on_pink_button_down"]
+[connection signal="button_down" from="colors/pink" to="hand" method="_on_purple_button_down"]
+[connection signal="button_down" from="colors/black" to="hand" method="_on_black_button_down"]
+[connection signal="timeout" from="objectSpawner/spawnRate" to="objectSpawner" method="_on_spawn_rate_timeout"]
+[connection signal="timeout" from="timer/Timer" to="." method="_on_timer_timeout"]

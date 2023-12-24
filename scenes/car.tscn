@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://divp3e1f4ve13"]
+
+[ext_resource type="Texture2D" uid="uid://c46vqtgtsqv6b" path="res://sprites/quarter.png" id="1_u0b62"]
+[ext_resource type="Texture2D" uid="uid://cghren06pnipr" path="res://sprites/square.png" id="2_j2evv"]
+[ext_resource type="Texture2D" uid="uid://blal0lfrup0yd" path="res://sprites/circle.png" id="3_yjp1d"]
+[ext_resource type="Texture2D" uid="uid://dpmj1ll5hfk6q" path="res://sprites/donut.png" id="4_6uqa6"]
+[ext_resource type="Texture2D" uid="uid://db5khnny2bm0m" path="res://sprites/screw.png" id="5_4wivj"]
+[ext_resource type="Texture2D" uid="uid://dy4ytkt5i5x31" path="res://sprites/stick.png" id="6_ryvta"]
+
+[node name="car" type="Node2D"]
+
+[node name="Quarter" type="Sprite2D" parent="."]
+modulate = Color(0.278431, 0.478431, 0.937255, 1)
+texture_filter = 1
+position = Vector2(0.500011, -16.5)
+texture = ExtResource("1_u0b62")
+
+[node name="Square4" type="Sprite2D" parent="."]
+modulate = Color(0.996078, 0.329412, 0.266667, 1)
+texture_filter = 1
+position = Vector2(25.5, -17.5)
+texture = ExtResource("2_j2evv")
+
+[node name="Square" type="Sprite2D" parent="."]
+modulate = Color(0.996078, 0.329412, 0.266667, 1)
+texture_filter = 1
+position = Vector2(-24, 6)
+texture = ExtResource("2_j2evv")
+
+[node name="Square2" type="Sprite2D" parent="."]
+modulate = Color(0.996078, 0.329412, 0.266667, 1)
+texture_filter = 1
+position = Vector2(1.00001, 6)
+texture = ExtResource("2_j2evv")
+
+[node name="Square3" type="Sprite2D" parent="."]
+modulate = Color(0.996078, 0.329412, 0.266667, 1)
+texture_filter = 1
+position = Vector2(26, 6)
+texture = ExtResource("2_j2evv")
+
+[node name="Circle" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+position = Vector2(-23.5, 16.5)
+texture = ExtResource("3_yjp1d")
+
+[node name="Circle2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+texture_filter = 1
+position = Vector2(26.5, 16.5)
+texture = ExtResource("3_yjp1d")
+
+[node name="Donut" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(26, -18)
+texture = ExtResource("4_6uqa6")
+
+[node name="Screw" type="Sprite2D" parent="."]
+modulate = Color(0.988235, 0.501961, 0, 1)
+texture_filter = 1
+position = Vector2(30, -3)
+texture = ExtResource("5_4wivj")
+
+[node name="Stick" type="Sprite2D" parent="."]
+modulate = Color(0.996078, 0.329412, 0.266667, 1)
+texture_filter = 1
+position = Vector2(12, -3)
+texture = ExtResource("6_ryvta")
+
+[node name="Donut2" type="Sprite2D" parent="."]
+modulate = Color(0.984314, 0.843137, 0, 1)
+texture_filter = 1
+position = Vector2(-23.5, 15.5)
+texture = ExtResource("4_6uqa6")
+
+[node name="Donut3" type="Sprite2D" parent="."]
+modulate = Color(0.984314, 0.843137, 0, 1)
+texture_filter = 1
+position = Vector2(26.5, 15.5)
+texture = ExtResource("4_6uqa6")
+
+[node name="Screw2" type="Sprite2D" parent="."]
+modulate = Color(0.988235, 0.501961, 0, 1)
+texture_filter = 1
+position = Vector2(-28, -2)
+rotation = 3.14159
+texture = ExtResource("5_4wivj")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b88ta7mnnhbql"]
+
+[ext_resource type="Script" path="res://scripts/hand.gd" id="1_aiukn"]
+[ext_resource type="Texture2D" uid="uid://c4534w3wf406y" path="res://sprites/paintbrush.png" id="2_xwv5f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bp1x6"]
+size = Vector2(30.183, 30.183)
+
+[node name="hand" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_aiukn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(48, -72)
+scale = Vector2(2.66315, 2.66315)
+texture = ExtResource("2_xwv5f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.99523e-07, -8.99523e-07)
+shape = SubResource("RectangleShape2D_bp1x6")
