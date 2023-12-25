@@ -21,7 +21,7 @@ func _process(delta):
 	if position.x > 1300:
 		$".".queue_free()
 		
-
+		
 func _on_body_entered(body):
 	can_be_grabbed = true
 

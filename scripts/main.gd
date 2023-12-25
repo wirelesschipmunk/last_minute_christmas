@@ -9,6 +9,8 @@ var toys = [
 
 var toy_instance
 
+var is_paused = false
+
 func _ready():
 	toy_instance = toys.pick_random().instantiate()
 	toy_instance.position = Vector2(942, 422)
@@ -20,6 +22,8 @@ func _on_timer_timeout():
 	var toy_parts = toy_instance.get_children()
 	
 	var objects = []
+	var possible_points = toy_parts.size() * 18
+	var points = 0
 	
 	# removes items on convyer
 	for obj in all_objects:
@@ -28,19 +32,30 @@ func _on_timer_timeout():
 		else:
 			objects.append(obj)
 	
+	print(objects)
 	for part in toy_parts:
 		var part_img = part.texture
 		var part_color = part.modulate
-		print("color: ", part_color, "img: ", part_img)
 		
 		for obj in objects:
 			var obj_img = obj.get_child(0).texture
 			var obj_color = obj.modulate
+			print(part_color, obj_color)
 			
 			if obj_img == part_img:
-				print("nice!")
+				print("right part")
+				points += 9
 				
+			if obj_color == part_color:
+				print("right color")
+				points += 9
 			
-	
-	
-	
+			if obj_img == part_img or obj_color == part_color:
+				objects.erase(obj)
+				toy_parts.erase(part)
+				
+	print(points)
+#	get_tree().reload_current_scene()
+				
+
+
