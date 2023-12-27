@@ -3,7 +3,6 @@ extends Node2D
 var toys = [
 	preload("res://scenes/car.tscn"),
 	preload("res://scenes/robo.tscn"),
-	preload("res://scenes/gnome.tscn"),
 	preload("res://scenes/firetruck.tscn"),
 ]
 
@@ -13,7 +12,7 @@ var is_paused = false
 
 func _ready():
 	toy_instance = toys.pick_random().instantiate()
-	toy_instance.position = Vector2(942, 422)
+	toy_instance.position = Vector2($referencePoint.position)
 	toy_instance.scale = Vector2(3.5, 3.5)
 	$".".add_child(toy_instance)
 
@@ -22,7 +21,7 @@ func _on_timer_timeout():
 	var toy_parts = toy_instance.get_children()
 	
 	var objects = []
-	var possible_points = toy_parts.size() * 18
+	var possible_points = toy_parts.size() * 14
 	var points = 0
 	
 	# removes items on convyer
@@ -46,16 +45,23 @@ func _on_timer_timeout():
 				print("right part")
 				points += 9
 				
-			if obj_color == part_color:
-				print("right color")
-				points += 9
+				if obj_color == part_color:
+					print("right color")
+					points += 5
 			
 			if obj_img == part_img or obj_color == part_color:
 				objects.erase(obj)
 				toy_parts.erase(part)
 				
 	print(points)
-#	get_tree().reload_current_scene()
+	
+	$Score.show()
+	$Score/points.text = str(points) + " pts"
+	$Score/possible.text = str(possible_points) + " pos"
+	get_tree().paused = true
+	
+	await get_tree().create_timer(5.0).timeout
+	get_tree().reload_current_scene()
 				
 
 

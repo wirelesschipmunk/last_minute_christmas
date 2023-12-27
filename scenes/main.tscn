@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bbhohkmos7hkc"]
+[gd_scene load_steps=49 format=3 uid="uid://bbhohkmos7hkc"]
 
 [ext_resource type="PackedScene" uid="uid://b88ta7mnnhbql" path="res://scenes/hand.tscn" id="1_am00f"]
 [ext_resource type="Script" path="res://scripts/convyer.gd" id="1_e72bp"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dhuwf5yuoncuh" path="res://sprites/blueprint.png" id="19_nqlgq"]
 [ext_resource type="PackedScene" uid="uid://bxdbyv4224rn2" path="res://scenes/pauseMenu.tscn" id="20_ymwl2"]
 [ext_resource type="Texture2D" uid="uid://c67mnvcqeq62j" path="res://sprites/score.png" id="21_4tt1q"]
+[ext_resource type="Theme" uid="uid://b7u60w3qe4ry" path="res://theme.tres" id="21_5mumr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fdqsh"]
 atlas = ExtResource("4_0nfvt")
@@ -185,7 +186,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8oakw"]
-size = Vector2(1664, 192)
+size = Vector2(1920, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qc7s3"]
 size = Vector2(416, 409)
@@ -213,7 +214,7 @@ speed_scale = 18.985
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="convyer"]
-position = Vector2(528, 96)
+position = Vector2(552, 96)
 shape = SubResource("RectangleShape2D_8oakw")
 
 [node name="Anvil" type="Sprite2D" parent="."]
@@ -331,6 +332,9 @@ offset_bottom = 403.0
 scale = Vector2(2.54162, 2.54162)
 texture_normal = ExtResource("13_jri8i")
 
+[node name="referencePoint" type="Marker2D" parent="."]
+position = Vector2(944, 408)
+
 [node name="objectSpawner" type="Marker2D" parent="."]
 position = Vector2(-176, 104)
 gizmo_extents = 55.0
@@ -356,15 +360,51 @@ label_settings = SubResource("LabelSettings_odn5c")
 script = ExtResource("18_tbq0j")
 
 [node name="Timer" type="Timer" parent="timer"]
-wait_time = 20.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
 [node name="Score" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
 position = Vector2(576, 306)
-scale = Vector2(3.92793, 3.92793)
+scale = Vector2(3.29209, 3.29209)
 texture = ExtResource("21_4tt1q")
+
+[node name="message" type="Label" parent="Score"]
+offset_left = -26.7068
+offset_top = -38.8083
+offset_right = 28.2932
+offset_bottom = -17.8083
+theme_override_fonts/font = ExtResource("16_51sfy")
+text = "not bad"
+
+[node name="points" type="Label" parent="Score"]
+offset_left = -26.3811
+offset_top = -17.9218
+offset_right = 25.6189
+offset_bottom = 1.07824
+theme = ExtResource("21_5mumr")
+theme_override_fonts/font = ExtResource("16_51sfy")
+text = "27 pts"
+
+[node name="possible" type="Label" parent="Score"]
+offset_left = -28.1663
+offset_top = 7.27339
+offset_right = 29.8337
+offset_bottom = 26.2734
+theme = ExtResource("21_5mumr")
+theme_override_fonts/font = ExtResource("16_51sfy")
+text = "200 pos"
+
+[node name="divider" type="Label" parent="Score"]
+offset_left = -31.5909
+offset_top = -6.18033
+offset_right = 32.4091
+offset_bottom = 12.8197
+theme = ExtResource("21_5mumr")
+theme_override_fonts/font = ExtResource("16_51sfy")
+text = "--------"
 
 [node name="pause" parent="." instance=ExtResource("20_ymwl2")]
 visible = false
